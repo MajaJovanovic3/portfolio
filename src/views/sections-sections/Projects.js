@@ -141,29 +141,28 @@ function Projects() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h6 className="category text-muted">Our work</h6>
-                <h2 className="title">Some of Our Awesome Projects - 3</h2>
+                <h6 className="category text-muted">Some of my projects</h6>
+                <h2 className="title">To-Do App</h2>
               </Col>
             </Row>
             <div className="section-story-overview">
-              <Row>
-                <Col md="6">
+              <Row >
+                <Col md="6" style={{display:"block"}}>
                   <div
                     className="image-container image-left"
                     style={{
                       backgroundImage:
                         "url(" +
                         require("assets/img/dashboard.jpeg").default +
-                        ")",                        
-                        height:"360px"
-                    }}
-                  >
-                    <p className="blockquote blockquote-info">
-                      "Amber Interiors is available to assist in all aspects of
-                      a project from start to finish including consulting with
-                      Architects and Builders"
+                        ")",      
+                        width:"700px",         
+                        height:"400px"
+                    }}>
+                    </div>
+                   <p style={{color:"white", padding:'70px'}}>
+                     To-Do App helps you to better organize and successfully manage your day.
+                     For the selected date, add a to-do list, and check each one you complete. Try to check everything you have planned by the end of the day.
                     </p>
-                  </div>
                 </Col>
                 <Col md="6">
                   <div
@@ -171,9 +170,10 @@ function Projects() {
                     style={{
                       backgroundImage:
                         "url(" +
-                        require("assets/img/tasks.jpeg").default +
-                        ")",
-                        height:"360px"
+                        require("assets/img/register.jpeg").default +
+                        ")",      
+                        width:"700px",         
+                        height:"400px"
                     }}
                   ></div>
                   <h6 className="category text-info">Design</h6>
@@ -194,7 +194,7 @@ function Projects() {
                     style={{
                       backgroundImage:
                         "url(" +
-                        require("assets/img/project24.jpg").default +
+                        require("assets/img/tasks.jpeg").default +
                         ")",
                     }}
                   >
@@ -211,7 +211,7 @@ function Projects() {
                     style={{
                       backgroundImage:
                         "url(" +
-                        require("assets/img/project23.jpg").default +
+                        require("assets/img/taskDetail.jpeg").default +
                         ")",
                     }}
                   ></div>
@@ -231,39 +231,25 @@ function Projects() {
           <Container fluid>
             <Row>
               <Col className="mr-auto ml-auto text-center" md="8">
-                <h6 className="category text-muted">Our work</h6>
-                <h2 className="title">Some of Our Awesome Projects - 4</h2>
+                <h6 className="category text-muted">Some of my projects</h6>
+                <h2 className="title">To-Do App</h2>
               </Col>
             </Row>
             <Row>
               <Col className="px-0" md="6">
                 <Card
-                  className="card-fashion card-background"
-                  style={{
-                    backgroundImage:
-                      "url(" +
-                      require("assets/img/tasks.jpeg").default +
-                      ")",
-                  }}
-                >
-                  <CardBody>
-                    <CardTitle className="text-left" tag="div">
-                      <h2>
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          The “crazy idea that could lead to a big future
-                          commission” project.
-                        </a>
-                      </h2>
-                    </CardTitle>
-                    <CardFooter className="text-left">
-                      <div className="stats">
-                        <span>
-                          <i className="now-ui-icons objects_globe"></i>
-                          The “Crazy idea” project
-                        </span>
-                      </div>
-                    </CardFooter>
-                  </CardBody>
+                 >
+                  <div
+                    className="image-container image-left"
+                    style={{
+                      backgroundImage:
+                        "url(" +
+                        require("assets/img/register.jpeg").default +
+                        ")",      
+                        width:"700px",         
+                        height:"400px"
+                    }}
+                  />
                 </Card>
               </Col>
               <Col className="px-0" md="6">
