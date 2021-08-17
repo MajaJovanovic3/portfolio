@@ -1,7 +1,13 @@
 /*eslint-disable*/
 import React from "react";
-
-// reactstrap components
+import sl1 from '../../assets/img/sl1.jpg'
+import sl2 from '../../assets/img/sl2.jpg'
+import izvor from '../../assets/img/izvor.jpg'
+import izvor2 from '../../assets/img/izvor2.jpg'
+import tablet from '../../assets/img/tablet.jpg'
+import pretraga from '../../assets/img/pretraga.jpg'
+import darkMode from '../../assets/img/darkMode.jpg'
+// reactstrap components 
 import {
   Badge,
   Button,
@@ -26,117 +32,6 @@ function Projects() {
   return (
     <>
       <div className="cd-section" id="projects">
-        <div className="projects-2">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h6 className="text-muted">Our work</h6>
-                <h2 className="title">Some of Our Awesome Products - 2</h2>
-                <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your projects. Keep you user engaged by providing meaningful
-                  information.
-                </h5>
-                <div className="section-space"></div>
-              </Col>
-            </Row>
-            <Row>
-              <Col md="4">
-                <Card className="card-plain">
-                  <a
-                    href="https://www.creative-tim.com/product/now-ui-kit-react?ref=nuk-pro-react-sections"
-                    target="_blank"
-                  >
-                    <div className="card-image">
-                      <img
-                        alt="..."
-                        className="img-raised rounded"
-                        src="https://s3.amazonaws.com/creativetim_bucket/products/170/original/opt_nuk_react_thumbnail.jpg"
-                      ></img>
-                    </div>
-                  </a>
-                  <CardBody>
-                    <a
-                      href="https://www.creative-tim.com/product/now-ui-kit-react?ref=nuk-pro-react-sections"
-                      target="_blank"
-                    >
-                      <CardTitle tag="h4">Now UI Kit React</CardTitle>
-                    </a>
-                    <h6 className="category text-info">Free UI Kit</h6>
-                    <p className="card-description">
-                      Now UI Kit React is a free Bootstrap 4, React, React Hooks
-                      and Reactstrap UI Kit provided for free by Invision and
-                      Creative Tim. It is a beautiful cross-platform UI kit
-                      featuring over 50 elements and 3 templates.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-plain">
-                  <a
-                    href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=nuk-pro-react-sections"
-                    target="_blank"
-                  >
-                    <div className="card-image">
-                      <img
-                        alt="..."
-                        className="img-raised rounded"
-                        src="https://s3.amazonaws.com/creativetim_bucket/products/155/original/opt_adp_react_thumbnail.jpg?1554905507"
-                      ></img>
-                    </div>
-                  </a>
-                  <CardBody>
-                    <a
-                      href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=nuk-pro-react-sections"
-                      target="_blank"
-                    >
-                      <CardTitle tag="h4">Argon Dashboard PRO React</CardTitle>
-                    </a>
-                    <h6 className="category text-info">Premium Template</h6>
-                    <p className="card-description">
-                      Argon is a completely new product built on our newest
-                      re-built from scratch framework structure that is meant to
-                      make our products more intuitive, more adaptive and,
-                      needless to say, so much easier to customize.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-plain">
-                  <a
-                    href="https://www.creative-tim.com/product/paper-kit-pro-react?ref=nuk-pro-react-sections"
-                    target="_blank"
-                  >
-                    <div className="card-image">
-                      <img
-                        alt="..."
-                        className="img-raised rounded"
-                        src="https://s3.amazonaws.com/creativetim_bucket/products/168/original/opt_pkp_react_thumbnail.jpg"
-                      ></img>
-                    </div>
-                  </a>
-                  <CardBody>
-                    <a
-                      href="https://www.creative-tim.com/product/paper-kit-pro-react?ref=nuk-pro-react-sections"
-                      target="_blank"
-                    >
-                      <CardTitle tag="h4">Paper Kit PRO React</CardTitle>
-                    </a>
-                    <h6 className="category text-info">Premium UI Kit</h6>
-                    <p className="card-description">
-                      Paper Kit PRO React is a Premium Bootstrap 4, Reactstrap,
-                      React, React Hooks and Paper Design UI Kit with pale
-                      colors, beautiful typography and thoughtful drawings.
-                      We've created it having paper and drawings in mind.
-                    </p>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
         <div className="projects-3" data-background-color="black">
           <Container>
             <Row>
@@ -147,22 +42,22 @@ function Projects() {
             </Row>
             <div className="section-story-overview">
               <Row >
-                <Col md="6" style={{display:"block"}}>
+                <Col md="6" style={{ display: "block" }}>
                   <div
                     className="image-container image-left"
                     style={{
                       backgroundImage:
                         "url(" +
                         require("assets/img/dashboard.jpeg").default +
-                        ")",      
-                        width:"700px",         
-                        height:"400px"
+                        ")",
+                      width: "700px",
+                      height: "400px"
                     }}>
-                    </div>
-                   <p style={{color:"white", padding:'70px'}}>
-                     To-Do App helps you to better organize and successfully manage your day.
-                     For the selected date, add a to-do list, and check each one you complete. Try to check everything you have planned by the end of the day.
-                    </p>
+                  </div>
+                  <p style={{ color: "white", padding: '70px' }}>
+                    To-Do App helps you to better organize and successfully manage your day.
+                    For the selected date, add a to-do list, and check each one you complete. Try to check everything you have planned by the end of the day. :)
+                  </p>
                 </Col>
                 <Col md="6">
                   <div
@@ -171,17 +66,14 @@ function Projects() {
                       backgroundImage:
                         "url(" +
                         require("assets/img/register.jpeg").default +
-                        ")",      
-                        width:"700px",         
-                        height:"400px"
+                        ")",
+                      width: "700px",
+                      height: "400px"
                     }}
                   ></div>
-                  <h6 className="category text-info">Design</h6>
-                  <CardTitle tag="h4">Coco Kelley</CardTitle>
+                  <CardTitle tag="h4">Functionalities</CardTitle>
                   <p>
-                    Amber Lewis’s interior design blog takes you inside the
-                    creative workings of her Los Angeles–based studio. Keep an
-                    eye on this website for an industry insider’s point of view.
+                    login, logout, register, add tasks by dates, edit, delete and check task when it is completed, upload one or more files within task, live search...
                   </p>
                 </Col>
               </Row>
@@ -196,13 +88,10 @@ function Projects() {
                         "url(" +
                         require("assets/img/tasks.jpeg").default +
                         ")",
+                      width: "700px",
+                      height: "400px"
                     }}
                   >
-                    <p className="blockquote blockquote-info">
-                      "We provide a simple, approachable way to decorate your
-                      desired space with ease. Each e-décor is completely
-                      individualized"
-                    </p>
                   </div>
                 </Col>
                 <Col md="5">
@@ -213,14 +102,13 @@ function Projects() {
                         "url(" +
                         require("assets/img/taskDetail.jpeg").default +
                         ")",
+                      width: "700px",
+                      height: "400px"
                     }}
                   ></div>
-                  <h6 className="category text-info">E-Decor</h6>
-                  <CardTitle tag="h4">Red Trad</CardTitle>
+                  <h6 className="category text-info">Skills</h6>
                   <p>
-                    We designed this new build family home located in Santa
-                    Monica with a mission to make the large size of the
-                    property, feel cozy, collected, and unique.
+                    ReactJS, NodeJs, MongoDb
                   </p>
                 </Col>
               </Row>
@@ -232,109 +120,85 @@ function Projects() {
             <Row>
               <Col className="mr-auto ml-auto text-center" md="8">
                 <h6 className="category text-muted">Some of my projects</h6>
-                <h2 className="title">To-Do App</h2>
+                <h2 className="title">Novine Srbija</h2>
               </Col>
             </Row>
             <Row>
-              <Col className="px-0" md="6">
+              <Col className="px-0" md="5">
                 <Card
-                 >
+                >
                   <div
                     className="image-container image-left"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/register.jpeg").default +
-                        ")",      
-                        width:"700px",         
-                        height:"400px"
-                    }}
                   />
+                  <img src={sl1} width="300" height="400" style={{ paddingRight: "10px" }} />
+                  <img src={sl2} width="300" height="400" />
                 </Card>
               </Col>
-              <Col className="px-0" md="6">
+              <Col className="px-0" md="7">
                 <div className="card-container">
                   <Card className="card-fashion">
                     <CardTitle tag="div">
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        <h4>
-                          The next time you’re on vacation, take advantage of
-                          all the work you can get done...
-                        </h4>
-                      </a>
+                      <h4>
+                        Novine Srbija provides users with daily information on current events in Serbia from sources they consider reliable and relevant. Also, user can choose the topics
+                        he wants to follow, which allows him to quickly and easily get to the news that interests him.
+                      </h4>
                     </CardTitle>
-                    <CardBody>
-                      <CardFooter>
-                        <div className="stats">
-                          <span>
-                            <i className="now-ui-icons education_paper"></i>
-                            The “I’m on vacation” project
-                          </span>
-                        </div>
-                      </CardFooter>
-                    </CardBody>
                   </Card>
-                  <Card
-                    className="card-fashion card-background"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/project15.jpg").default +
-                        ")",
-                    }}
-                  ></Card>
+                  <img src={izvor} width="250" height="400" style={{ marginRight: "0px" }} />
                 </div>
               </Col>
             </Row>
             <Row>
-              <Col className="px-0" md="6">
+              <Col className="px-0" md="4">
                 <div className="card-container">
                   <Card
-                    className="card-fashion card-background"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/project17.jpg").default +
-                        ")",
-                    }}
-                  ></Card>
-                  <Card className="card-fashion arrow-left">
-                    <CardTitle tag="div">
-                      <h4>
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          The elements of Agile Project Management have been
-                          around for decades...
-                        </a>
-                      </h4>
-                    </CardTitle>
-                    <CardBody>
-                      <CardFooter>
-                        <div className="stats">
-                          <span>
-                            <i className="now-ui-icons design_app"></i>
-                            The "Agile Project" project
-                          </span>
-                        </div>
-                      </CardFooter>
-                    </CardBody>
+                  >
+                    <img src={izvor2} width="240" height="400" style={{ paddingRight: "10px" }} />
+                    <img src={darkMode} width="240" height="400" />
                   </Card>
                 </div>
               </Col>
-              <Col className="px-0" md="6">
+              <Col className="px-0" md="4">
+                <div className="card-container">
+                  <Card className="card-fashion">
+                    <CardTitle tag="div">
+                      <h4>
+                        Application has more than 50 sources, daily news, daily newspapers, magazines and blogs
+                      </h4>
+                    </CardTitle>
+                  </Card>
+                  <img src={pretraga} width="250" height="400" />
+                </div>
+              </Col>
+              <Col className="px-0" md="4">
+                <div className="card-container">
+                  <Card className="card-fashion">
+                    <CardTitle tag="div">
+                      <h4>
+                      With the given words, the search returns all the news relevant to you from all sources that contain that topic.
+                      </h4>
+                    </CardTitle>
+                  </Card>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+            <Col className="px-0" md="6">
                 <Card
                   className="card-fashion card-background"
                   style={{
+                    marginRight:"50px",
                     backgroundImage:
                       "url(" +
-                      require("assets/img/project16.jpg").default +
+                      require("../../assets/img/tablet.jpg").default +
                       ")",
                   }}
                 >
                   <CardBody>
                     <CardTitle className="text-left" tag="div">
                       <h2>
-                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                          Performing a Project Premortem
+                        <a href="https://www.novinesrbija.rs/" target="_blank" >
+                          Click here for more information ...
                         </a>
                       </h2>
                     </CardTitle>
@@ -342,150 +206,24 @@ function Projects() {
                       <div className="stats">
                         <span>
                           <i className="now-ui-icons media-2_sound-wave"></i>
-                          The "Premortem" project
+                          visit our website
                         </span>
                       </div>
                     </CardFooter>
                   </CardBody>
                 </Card>
               </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="projects-5">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Some of Our Awesome Projects - 5</h2>
-                <h4 className="description">
-                  This is the paragraph where you can write more details about
-                  your projects. Keep you user engaged by providing meaningful
-                  information.
-                </h4>
-                <div className="section-space"></div>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="ml-auto" md="5">
-                <Card
-                  className="card-background card-background-product card-raised"
-                  style={{
-                    backgroundImage:
-                      "url(" + require("assets/img/project8.jpg").default + ")",
-                  }}
-                >
-                  <CardBody>
-                    <CardTitle tag="h2">Social Analytics</CardTitle>
-                    <p className="card-description">
-                      Insight to help you create, connect, and convert.
-                      Understand Your Audience's Interests, Influence,
-                      Interactions, and Intent. Discover emerging topics and
-                      influencers to reach new audiences.
-                    </p>
-                    <Badge className="badge-neutral">Analytics</Badge>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col className="mr-auto" md="5">
-                <div className="info info-horizontal">
-                  <div className="icon icon-danger">
-                    <i className="now-ui-icons ui-2_chat-round"></i>
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">
-                      Listen to Social Conversations
-                    </h4>
-                    <p className="description">
-                      Gain access to the demographics, psychographics, and
-                      location of unique people who talk about your brand.
-                    </p>
-                  </div>
+              <Col className="px-0" md="6">
+                <div className="card-container">
+                  <Card className="card-fashion" style={{marginLeft:"80px"}}>
+                    <CardTitle tag="div">
+                      <h4>
+                      The following skills were used to create the application: Android, Java, NodeJS.
+                      My part in making the app was a complete backend part done using NodeJS
+                      </h4>
+                    </CardTitle>
+                  </Card>
                 </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-danger">
-                    <i className="now-ui-icons business_chart-pie-36"></i>
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Performance Analyze</h4>
-                    <p className="description">
-                      Unify data from Facebook, Instagram, Twitter, LinkedIn,
-                      and Youtube to gain rich insights from easy-to-use
-                      reports.
-                    </p>
-                  </div>
-                </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-danger">
-                    <i className="now-ui-icons design-2_ruler-pencil"></i>
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Social Conversions</h4>
-                    <p className="description">
-                      Track actions taken on your website that originated from
-                      social, and understand the impact on your bottom line.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            <hr></hr>
-            <Row>
-              <Col className="ml-auto mt-5" md="5">
-                <div className="info info-horizontal">
-                  <div className="icon icon-warning">
-                    <i className="now-ui-icons users_single-02"></i>
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Work With Any Team</h4>
-                    <p className="description">
-                      Whether it’s for work or even the next family vacation,
-                      Trello helps your team.
-                    </p>
-                  </div>
-                </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-warning">
-                    <i className="now-ui-icons business_chart-bar-32"></i>
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">A Productivity Platform</h4>
-                    <p className="description">
-                      Integrate the apps your team already uses directly into
-                      your workflow.
-                    </p>
-                  </div>
-                </div>
-                <div className="info info-horizontal">
-                  <div className="icon icon-warning">
-                    <i className="now-ui-icons arrows-1_refresh-69"></i>
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Always In Sync</h4>
-                    <p className="description">
-                      No matter where you are, Trello stays in sync across all
-                      of your devices.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-              <Col className="mr-auto" md="5">
-                <Card
-                  className="card-background card-background-product card-raised"
-                  style={{
-                    backgroundImage:
-                      "url(" + require("assets/img/project9.jpg").default + ")",
-                  }}
-                >
-                  <CardBody>
-                    <CardTitle tag="h2">Trello lets you work.</CardTitle>
-                    <p className="card-description">
-                      Trello’s boards, lists, and cards enable you to organize
-                      and prioritize your projects in a fun, flexible and
-                      rewarding way.
-                    </p>
-                    <Badge className="badge-neutral">Trello</Badge>
-                  </CardBody>
-                </Card>
               </Col>
             </Row>
           </Container>
