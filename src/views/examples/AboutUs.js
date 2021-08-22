@@ -1,21 +1,6 @@
 import React from "react";
-// react plugin used to create DropdownMenu for selecting items
-import Select from "react-select";
-
 // reactstrap components
 import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  FormGroup,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col,
@@ -26,10 +11,10 @@ import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import AboutUsHeader from "components/Headers/AboutUsHeader.js";
 import Footer from "components/Footers/Footer.js";
 
+<style>
+
+</style>
 function AboutUs() {
-  const [specialitySelect, setSpecialitySelect] = React.useState(null);
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("about-us");
     document.body.classList.add("sidebar-collapse");
@@ -43,12 +28,12 @@ function AboutUs() {
   }, []);
   return (
     <>
-      <DropdownFixedNavbar />
+      <DropdownFixedNavbar about={true}/>
       <div className="wrapper">
         <AboutUsHeader />
         <div className="section">
             <div className="features-3">
-              <Container>
+              <Container style={{backgroundColor:"#536e35"}}>
                 <Row>
                   <Col className="mr-auto ml-auto" md="6">
                     <h2 className="title">Simple. Communicative. Adventurer.</h2>
@@ -70,7 +55,7 @@ I would like to improve as much as possible and to have real useful projects beh
               </Container>              
           </div>
           <div className="separator-line bg-info"></div>
-          <Container>
+          <Container style={{backgroundColor:"#536e35"}}>
               <Row className="text-center">
                 <Col className="ml-auto mr-auto" md="8">
                   <h2 className="title">Basic info</h2>
@@ -86,7 +71,7 @@ I would like to improve as much as possible and to have real useful projects beh
                   </Container>
           <div className="separator-line bg-info"></div>
           <div className="about-office">
-            <Container>
+            <Container style={{backgroundColor:"#536e35"}}>
               <Row className="text-center">
                 <Col className="ml-auto mr-auto" md="8">
                   <h2 className="title">Spare time</h2>

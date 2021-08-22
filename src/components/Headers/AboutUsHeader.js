@@ -27,7 +27,7 @@ function AboutUsHeader() {
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/programming.jpg").default + ")",
+              "url(" + require("assets/img/about-me.jpg").default + ")",
           }}
           ref={pageHeader}
         ></div>

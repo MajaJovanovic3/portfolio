@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Container } from "reactstrap";
@@ -14,47 +15,19 @@ function FooterBlack() {
           <nav>
             <ul>
               <li>
-                <a
-                  href="https://www.creative-tim.com?ref=nuk-pro-react-footer-black"
-                  target="_blank"
-                >
-                  Creative Tim
-                </a>
+               <Link to='/about-us'>About Me</Link>
               </li>
               <li>
-                <a
-                  href="http://presentation.creative-tim.com?ref=nuk-pro-react-footer-black"
-                  target="_blank"
-                >
-                  About Us
-                </a>
+               <Link to='/projects'>Projects</Link>
               </li>
               <li>
-                <a
-                  href="http://blog.creative-tim.com?ref=nuk-pro-react-footer-black"
-                  target="_blank"
-                >
-                  Blog
-                </a>
+               <Link to='/contact-us'>Contact</Link>
               </li>
             </ul>
           </nav>
           <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}, Designed by{" "}
-            <a
-              href="https://www.invisionapp.com?ref=creativetim"
-              target="_blank"
-            >
-              Invision
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nuk-pro-react-footer-black"
-              target="_blank"
-            >
-              Creative Tim
-            </a>
-            .
+            © {new Date().getFullYear()},
+            All Rights Reserved.
           </div>
         </Container>
       </footer>

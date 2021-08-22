@@ -15,126 +15,9 @@ import {
 } from "reactstrap";
 
 // core components
-import DropdownWhiteNavbar from "components/Navbars/DropdownWhiteNavbar.js";
 import ContactUsHeader from "components/Headers/ContactUsHeader.js";
+import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import Footer from "components/Footers/Footer.js";
-
-const MapWrapper = () => {
-  const mapRef = React.useRef(null);
-  React.useEffect(() => {
-    let google = window.google;
-    let map = mapRef.current;
-    let lat = "40.748817";
-    let lng = "-73.985428";
-    const myLatlng = new google.maps.LatLng(lat, lng);
-    const mapOptions = {
-      zoom: 13,
-      center: myLatlng,
-      scrollwheel: false,
-      zoomControl: true,
-      styles: [
-        {
-          featureType: "water",
-          elementType: "geometry",
-          stylers: [{ color: "#e9e9e9" }, { lightness: 17 }],
-        },
-        {
-          featureType: "landscape",
-          elementType: "geometry",
-          stylers: [{ color: "#f5f5f5" }, { lightness: 20 }],
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.fill",
-          stylers: [{ color: "#ffffff" }, { lightness: 17 }],
-        },
-        {
-          featureType: "road.highway",
-          elementType: "geometry.stroke",
-          stylers: [{ color: "#ffffff" }, { lightness: 29 }, { weight: 0.2 }],
-        },
-        {
-          featureType: "road.arterial",
-          elementType: "geometry",
-          stylers: [{ color: "#ffffff" }, { lightness: 18 }],
-        },
-        {
-          featureType: "road.local",
-          elementType: "geometry",
-          stylers: [{ color: "#ffffff" }, { lightness: 16 }],
-        },
-        {
-          featureType: "poi",
-          elementType: "geometry",
-          stylers: [{ color: "#f5f5f5" }, { lightness: 21 }],
-        },
-        {
-          featureType: "poi.park",
-          elementType: "geometry",
-          stylers: [{ color: "#dedede" }, { lightness: 21 }],
-        },
-        {
-          elementType: "labels.text.stroke",
-          stylers: [
-            { visibility: "on" },
-            { color: "#ffffff" },
-            { lightness: 16 },
-          ],
-        },
-        {
-          elementType: "labels.text.fill",
-          stylers: [
-            { saturation: 36 },
-            { color: "#333333" },
-            { lightness: 40 },
-          ],
-        },
-        { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
-        {
-          featureType: "transit",
-          elementType: "geometry",
-          stylers: [{ color: "#f2f2f2" }, { lightness: 19 }],
-        },
-        {
-          featureType: "administrative",
-          elementType: "geometry.fill",
-          stylers: [{ color: "#fefefe" }, { lightness: 20 }],
-        },
-        {
-          featureType: "administrative",
-          elementType: "geometry.stroke",
-          stylers: [{ color: "#fefefe" }, { lightness: 17 }, { weight: 1.2 }],
-        },
-      ],
-    };
-
-    map = new google.maps.Map(map, mapOptions);
-
-    const marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      title: "Now UI Kit PRO React!",
-    });
-
-    const contentString =
-      '<div class="info-window-content"><h2>Now UI Kit PRO React</h2>' +
-      "<p>A premium Admin for React, Reactstrap, and React Hooks.</p></div>";
-
-    const infowindow = new google.maps.InfoWindow({
-      content: contentString,
-    });
-
-    google.maps.event.addListener(marker, "click", function () {
-      infowindow.open(map, marker);
-    });
-  });
-  return (
-    <>
-      <div style={{ height: `100%` }} ref={mapRef}></div>
-    </>
-  );
-};
 
 function ContactUs() {
   const [nameFocus, setNameFocus] = React.useState(false);
@@ -153,18 +36,18 @@ function ContactUs() {
   }, []);
   return (
     <>
-      <DropdownWhiteNavbar />
+    <DropdownFixedNavbar contact={true}/>
       <div className="wrapper">
         <ContactUsHeader />
         <div className="main">
           <div className="contact-content">
-            <Container>
+            <Container style={{backgroundColor:"#bebeb4"}}>
               <Row>
                 <Col className="ml-auto mr-auto" md="5">
-                  <h2 className="title">Send us a message</h2>
-                  <p className="description">
-                    You can contact us with anything related to our Products.
-                    We'll get in touch with you as soon as possible. <br></br>
+                  <h2 className="title">Send me a message</h2>
+                  <p className="description" style={{color:"black"}}>
+                    You can contact me with anything related to my work.
+                    I'll get in touch with you as soon as possible. :D <br></br>
                     <br></br>
                   </p>
                   <Form id="contact-form" method="post" role="form">
@@ -174,7 +57,7 @@ function ContactUs() {
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons users_circle-08"></i>
+                          <i className="now-ui-icons users_circle-08"></i> &nbsp;
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -192,7 +75,7 @@ function ContactUs() {
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons ui-1_email-85"></i>
+                          <i className="now-ui-icons ui-1_email-85"></i> &nbsp;
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -210,7 +93,7 @@ function ContactUs() {
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons tech_mobile"></i>
+                          <i className="now-ui-icons tech_mobile"></i> &nbsp;
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
@@ -237,59 +120,14 @@ function ContactUs() {
                         defaultValue="Contact Us"
                         type="submit"
                       >
-                        Contact Us
+                        Contact me
                       </Button>
                     </div>
                   </Form>
                 </Col>
-                <Col className="ml-auto mr-auto" md="5">
-                  <div className="info info-horizontal mt-5">
-                    <div className="icon icon-info">
-                      <i className="now-ui-icons location_pin"></i>
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Find us at the office</h4>
-                      <p>
-                        Bld Mihail Kogalniceanu, nr. 8, <br></br>
-                        7652 Bucharest, <br></br>
-                        Romania
-                      </p>
-                    </div>
-                  </div>
-                  <div className="info info-horizontal">
-                    <div className="icon icon-info">
-                      <i className="now-ui-icons tech_mobile"></i>
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Give us a ring</h4>
-                      <p>
-                        Michael Jordan <br></br>
-                        +40 762 321 762 <br></br>
-                        Mon - Fri, 8:00-22:00
-                      </p>
-                    </div>
-                  </div>
-                  <div className="info info-horizontal">
-                    <div className="icon icon-info">
-                      <i className="business_briefcase-24 now-ui-icons"></i>
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Legal Information</h4>
-                      <p>
-                        Creative Tim Ltd. <br></br>
-                        VAT · EN2341241 <br></br>
-                        IBAN · EN8732ENGB2300099123 <br></br>
-                        Bank · Great Britain Bank
-                      </p>
-                    </div>
-                  </div>
-                </Col>
               </Row>
             </Container>
           </div>
-        </div>
-        <div className="big-map" id="contactUs2Map">
-          <MapWrapper />
         </div>
         <Footer />
       </div>

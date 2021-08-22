@@ -26,7 +26,8 @@ function ContactUsHeader() {
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/bg45.jpg").default + ")",
+              "url(" + require("assets/img/belgradePanorama.jpg").default + ")",
+            backgroundSize: "100% 100%"
           }}
           ref={pageHeader}
         ></div>
