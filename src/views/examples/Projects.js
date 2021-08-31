@@ -8,36 +8,28 @@ import tablet from '../../assets/img/tablet.jpg'
 import pretraga from '../../assets/img/pretraga.jpg'
 import darkMode from '../../assets/img/darkMode.jpg'
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
+import ProjectHeader from "components/Headers/ProjectHeader.js";
+import Carausel from "./Carausel";
 import Footer from "components/Footers/Footer.js";
-// reactstrap components 
+
 import {
-  Badge,
-  Button,
   Card,
   CardBody,
   CardFooter,
   CardTitle,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
 } from "reactstrap";
 
-// core components
 
 function Projects() {
-  const [pills, setPills] = React.useState("1");
   return (
     <>
-      <DropdownFixedNavbar project={true}/>
-      <IndexHeader />
-      <div className="cd-section" id="projects">
-        <div className="projects-3" style={{backgroundColor:'#818ba6'}}>
+      <DropdownFixedNavbar project={true} />
+      <ProjectHeader />
+      <div className="cd-section" id="projects"  style={{ backgroundColor:"#ebf1ff"}}>
+        <div className="projects-3" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}>
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
@@ -59,9 +51,12 @@ function Projects() {
                       height: "400px"
                     }}>
                   </div>
-                  <p style={{ color: "white", padding: '70px' }}>
+                  <p style={{ padding: '70px', color: '#3f51b5', fontSize: "16px", fontWeight: '600' }}>
                     To-Do App helps you to better organize and successfully manage your day.
-                    For the selected date, add a to-do list, and check each one you complete. Try to check everything you have planned by the end of the day. :)
+                    For the selected date, add a to-do list, and check each one you complete. Try to check everything you have planned by the end of the day.
+                    &nbsp;
+                    <img src={require("assets/img/smile.png").default} width="auto" height="25"></img>
+
                   </p>
                 </Col>
                 <Col md="6">
@@ -77,7 +72,7 @@ function Projects() {
                     }}
                   ></div>
                   <CardTitle tag="h4" className="category text-muted" >Functionalities</CardTitle>
-                  <p style={{color:"white"}}>
+                  <p style={{ color: '#3f51b5', fontSize: "16px", fontWeight: '600' }}>
                     login, logout, register, add tasks by dates, edit, delete and check task when it is completed, upload one or more files within task, live search...
                   </p>
                 </Col>
@@ -98,6 +93,11 @@ function Projects() {
                     }}
                   >
                   </div>
+                  <p style={{ color: '#3f51b5', fontWeight: '600', padding: '70px' }}>
+                    Code of this project is on my github page: <br />
+                    <a href='https://github.com/MajaJovanovic3/ToDoAppFront' target="_blank" style={{ color: '#6c757d', fontWeight: 'bold', textDecoration: 'underline' }}>frontend</a>  <br />
+                    <a href='https://github.com/MajaJovanovic3/ToDoApp' target="_blank" style={{ color: '#6c757d', fontWeight: 'bold', textDecoration: 'underline' }}>backend</a>
+                  </p>
                 </Col>
                 <Col md="5">
                   <div
@@ -112,7 +112,7 @@ function Projects() {
                     }}
                   ></div>
                   <h6 className="category text-muted">Skills</h6>
-                  <p style={{color:"white"}}>
+                  <p style={{ color: '#3f51b5', fontWeight: '600' }}>
                     ReactJS, NodeJs, MongoDb
                   </p>
                 </Col>
@@ -120,7 +120,14 @@ function Projects() {
             </div>
           </Container>
         </div>
-        <div className="projects-4" data-background-color="gray">
+        <hr
+        style={{
+            color: "#3f51b5",
+            backgroundColor: "#3f51b5",
+            height: 3
+        }}
+    />
+        <div className="projects-4" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}> 
           <Container fluid>
             <Row>
               <Col className="mr-auto ml-auto text-center" md="8">
@@ -128,81 +135,71 @@ function Projects() {
                 <h2 className="title">Novine Srbija</h2>
               </Col>
             </Row>
-            <Row>
-              <Col className="px-0" md="5">
-                <Card
-                >
-                  <div
-                    className="image-container image-left"
-                  />
-                  <img src={sl1} width="300" height="400" style={{ paddingRight: "10px" }} />
-                  <img src={sl2} width="300" height="400" />
-                </Card>
+            <Row style={{justifyContent:"space-evenly"}}>
+              <Col className="px-0" md="4">
+                <div
+                  className="image-container image-left"
+                />
+                <img src={sl1} width="225" height="400" style={{ paddingRight: "10px" }} />
+                <img src={sl2} width="225" height="400" />
               </Col>
-              <Col className="px-0" md="7">
-                <div className="card-container">
-                  <Card className="card-fashion">
-                    <CardTitle tag="div">
-                      <h4>
+              <Col>
+                <div class="row">
+                  <div class="col-sm-4" style={{ textAlign: 'center', width: '100px', margin: '10px 0px 10px 0px' }}>
+                    <div tag="div"  >
+                      <h4 >
                         Novine Srbija provides users with daily information on current events in Serbia from sources they consider reliable and relevant. Also, user can choose the topics
                         he wants to follow, which allows him to quickly and easily get to the news that interests him.
                       </h4>
-                    </CardTitle>
-                  </Card>
-                  <img src={izvor} width="250" height="400" style={{ marginRight: "0px" }} />
+                    </div>
+                  </div>
+                  <div class="col-sm-3" style={{ textAlign: 'center', width: '100px', margin: '10px 0px 10px 0px' }}>
+                    <h4>
+                      Application has more than 50 sources, daily news, daily newspapers, magazines and blogs
+                    </h4>
+                  </div>
+                  <div class="col-sm-5" >
+                    <Carausel />
+                  </div>
+
                 </div>
               </Col>
             </Row>
-            <Row>
-              <Col className="px-0" md="4">
-                <div className="card-container">
-                  <Card
-                  >
-                    <img src={izvor2} width="240" height="400" style={{ paddingRight: "10px" }} />
-                    <img src={darkMode} width="240" height="400" />
-                  </Card>
+            <Row style={{ marginTop: "30px" }}>
+            <div class="row">
+              <Col md="2">
+                <img src={pretraga} width="217" height="386" />
+                </Col>
+              <Col md="2" style={{ textAlign: 'center'}}>
+                <div tag="div">
+                  <h4>
+                    With the given words, the search returns all the news relevant to you from all sources that contain that topic.
+                  </h4>
                 </div>
               </Col>
-              <Col className="px-0" md="4">
-                <div className="card-container">
-                  <Card className="card-fashion">
-                    <CardTitle tag="div">
-                      <h4>
-                        Application has more than 50 sources, daily news, daily newspapers, magazines and blogs
-                      </h4>
-                    </CardTitle>
-                  </Card>
-                  <img src={pretraga} width="250" height="400" />
+              <Col md="2" >
+                <div className="card-container" style={{ textAlign: 'center' }}>
+                  <h4>
+                    The following skills were used to create the application: Android, Java, NodeJS.
+                    My part in making the app was a complete backend part done using NodeJS
+                  </h4>
                 </div>
               </Col>
-              <Col className="px-0" md="4">
-                <div className="card-container">
-                  <Card className="card-fashion">
-                    <CardTitle tag="div">
-                      <h4>
-                      With the given words, the search returns all the news relevant to you from all sources that contain that topic.
-                      </h4>
-                    </CardTitle>
-                  </Card>
-                </div>
-              </Col>
-            </Row>
-            <Row>
-            <Col className="px-0" md="6">
+              <Col className="px-0" md="6">
                 <Card
-                  className="card-fashion card-background"
+                  className="fashion card-background"
                   style={{
-                    marginRight:"50px",
                     backgroundImage:
                       "url(" +
                       require("../../assets/img/tablet.jpg").default +
                       ")",
+                      height:'386', width:'617'
                   }}
                 >
                   <CardBody>
                     <CardTitle className="text-left" tag="div">
                       <h2>
-                        <a href="https://www.novinesrbija.rs/" target="_blank" >
+                        <a href="https://www.novinesrbija.rs/" target="_blank"  style={{color:"white"}}>
                           Click here for more information ...
                         </a>
                       </h2>
@@ -218,22 +215,13 @@ function Projects() {
                   </CardBody>
                 </Card>
               </Col>
-              <Col className="px-0" md="6">
-                <div className="card-container">
-                  <Card className="card-fashion" style={{marginLeft:"80px"}}>
-                    <CardTitle tag="div">
-                      <h4>
-                      The following skills were used to create the application: Android, Java, NodeJS.
-                      My part in making the app was a complete backend part done using NodeJS
-                      </h4>
-                    </CardTitle>
-                  </Card>
-                </div>
-              </Col>
+              </div>
             </Row>
           </Container>
+          <div>
+          </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

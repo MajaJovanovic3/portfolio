@@ -11,7 +11,7 @@ function Footer() {
     <>
       <footer className="footer">
         <Container>
-         2021 All Rights Reserved
+         2021, All Rights Reserved.
         </Container>
       </footer>
     </>

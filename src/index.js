@@ -27,8 +27,7 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 // pages
 import AboutUs from "views/examples/AboutUs.js";
 import ContactUs from "views/examples/ContactUs.js";
-import Index from "views/Index.js";
-import Presentation from "views/Presentation.js";
+import Home from "views/Home.js";
 import Projects from "views/examples/Projects.js";
 // others
 
@@ -37,14 +36,12 @@ ReactDOM.render(
     <Switch>
       <Route path="/about-us" render={(props) => <AboutUs {...props} />} />
       <Route path="/contact-us" render={(props) => <ContactUs {...props} />} />
-      <Route path="/index" render={(props) => <Index {...props} />} />
       <Route path="/projects" render={(props) => <Projects {...props} />} />
-      
        <Route
-        path="/presentation"
-        render={(props) => <Presentation {...props} />}
+        path="/home"
+        render={(props) => <Home {...props} />}
       />
-      <Redirect to="/presentation" />
+      <Redirect to="/home" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
