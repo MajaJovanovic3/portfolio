@@ -1,12 +1,8 @@
-/*eslint-disable*/
+
 import React from "react";
 import sl1 from '../../assets/img/sl1.jpg'
 import sl2 from '../../assets/img/sl2.jpg'
-import izvor from '../../assets/img/izvor.jpg'
-import izvor2 from '../../assets/img/izvor2.jpg'
-import tablet from '../../assets/img/tablet.jpg'
 import pretraga from '../../assets/img/pretraga.jpg'
-import darkMode from '../../assets/img/darkMode.jpg'
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import ProjectHeader from "components/Headers/ProjectHeader.js";
 import Carausel from "./Carausel";

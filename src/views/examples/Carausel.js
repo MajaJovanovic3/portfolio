@@ -1,6 +1,5 @@
 import React from "react";
 
-// reactstrap components
 import {
   Container,
   Row,
@@ -9,8 +8,6 @@ import {
   CarouselItem,
   CarouselIndicators,
 } from "reactstrap";
-
-// core components
 
 import izvor2 from '../../assets/img/izvor2.jpg'
 import darkMode from '../../assets/img/darkMode.jpg'

@@ -14,7 +14,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
-// core components
+
 import ContactUsHeader from "components/Headers/ContactUsHeader.js";
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import Footer from "components/Footers/Footer.js";

@@ -1,12 +1,10 @@
 import React from "react";
-// reactstrap components
 import {
   Container,
   Row,
   Col,
 } from "reactstrap";
 
-// core components
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import AboutUsHeader from "components/Headers/AboutUsHeader.js";
 import Footer from "components/Footers/Footer.js";

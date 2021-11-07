@@ -1,9 +1,5 @@
 import React from "react";
 
-// reactstrap components
-
-// core components
-
 function ContactUsHeader() {
   let pageHeader = React.createRef();
   React.useEffect(() => {

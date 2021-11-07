@@ -1,9 +1,6 @@
 import React from "react";
 
-// reactstrap components
 import { Row, Col } from "reactstrap";
-
-// core components
 
 function AboutUsHeader() {
   let pageHeader = React.createRef();
