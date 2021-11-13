@@ -7,7 +7,7 @@ import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import ProjectHeader from "components/Headers/ProjectHeader.js";
 import Carausel from "./Carausel";
 import Footer from "components/Footers/Footer.js";
-
+import Tetris from "components/Tetris/Tetris";
 import {
   Card,
   CardBody,
@@ -18,13 +18,17 @@ import {
   Col,
 } from "reactstrap";
 
+function changeScroll() {
+  let style = document.body.style.overflow
+  document.body.style.overflow = (style === 'hidden') ? 'auto' : 'hidden'
+}
 
 function Projects() {
   return (
     <>
       <DropdownFixedNavbar project={true} />
       <ProjectHeader />
-      <div className="cd-section" id="projects"  style={{ backgroundColor:"#ebf1ff"}}>
+      <div className="cd-section" id="projects" style={{ backgroundColor: "#ebf1ff" }}>
         <div className="projects-3" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}>
           <Container>
             <Row>
@@ -117,13 +121,13 @@ function Projects() {
           </Container>
         </div>
         <hr
-        style={{
+          style={{
             color: "#3f51b5",
             backgroundColor: "#3f51b5",
             height: 3
-        }}
-    />
-        <div className="projects-4" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}> 
+          }}
+        />
+        <div className="projects-4" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}>
           <Container fluid>
             <Row>
               <Col className="mr-auto ml-auto text-center" md="8">
@@ -131,7 +135,7 @@ function Projects() {
                 <h2 className="title">Novine Srbija</h2>
               </Col>
             </Row>
-            <Row style={{justifyContent:"space-evenly"}}>
+            <Row style={{ justifyContent: "space-evenly" }}>
               <Col className="px-0" md="4">
                 <div
                   className="image-container image-left"
@@ -162,59 +166,95 @@ function Projects() {
               </Col>
             </Row>
             <Row style={{ marginTop: "30px" }}>
-            <div class="row">
-              <Col md="2">
-                <img src={pretraga} width="217" height="386" />
+              <div class="row">
+                <Col md="2">
+                  <img src={pretraga} width="217" height="386" />
                 </Col>
-              <Col md="2" style={{ textAlign: 'center'}}>
-                <div tag="div">
-                  <h4>
-                    With the given words, the search returns all the news relevant to you from all sources that contain that topic.
-                  </h4>
-                </div>
-              </Col>
-              <Col md="2" >
-                <div className="card-container" style={{ textAlign: 'center' }}>
-                  <h4>
-                    The following skills were used to create the application: Android, Java, NodeJS.
-                    My part in making the app was a complete backend part done using NodeJS
-                  </h4>
-                </div>
-              </Col>
-              <Col className="px-0" md="6">
-                <Card
-                  className="fashion card-background"
-                  style={{
-                    backgroundImage:
-                      "url(" +
-                      require("../../assets/img/tablet.jpg").default +
-                      ")",
-                      height:'386', width:'617'
-                  }}
-                >
-                  <CardBody>
-                    <CardTitle className="text-left" tag="div">
-                      <h2>
-                        <a href="https://www.novinesrbija.rs/" target="_blank"  style={{color:"white"}}>
-                          Click here for more information ...
-                        </a>
-                      </h2>
-                    </CardTitle>
-                    <CardFooter className="text-left">
-                      <div className="stats">
-                        <span>
-                          <i className="now-ui-icons media-2_sound-wave"></i>
-                          visit our website
-                        </span>
-                      </div>
-                    </CardFooter>
-                  </CardBody>
-                </Card>
-              </Col>
+                <Col md="2" style={{ textAlign: 'center' }}>
+                  <div tag="div">
+                    <h4>
+                      With the given words, the search returns all the news relevant to you from all sources that contain that topic.
+                    </h4>
+                  </div>
+                </Col>
+                <Col md="2" >
+                  <div className="card-container" style={{ textAlign: 'center' }}>
+                    <h4>
+                      The following skills were used to create the application: Android, Java, NodeJS.
+                      My part in making the app was a complete backend part done using NodeJS
+                    </h4>
+                  </div>
+                </Col>
+                <Col className="px-0" md="6">
+                  <Card
+                    className="fashion card-background"
+                    style={{
+                      backgroundImage:
+                        "url(" +
+                        require("../../assets/img/tablet.jpg").default +
+                        ")",
+                      height: '386', width: '617'
+                    }}
+                  >
+                    <CardBody>
+                      <CardTitle className="text-left" tag="div">
+                        <h2>
+                          <a href="https://www.novinesrbija.rs/" target="_blank" style={{ color: "white" }}>
+                            Click here for more information ...
+                          </a>
+                        </h2>
+                      </CardTitle>
+                      <CardFooter className="text-left">
+                        <div className="stats">
+                          <span>
+                            <i className="now-ui-icons media-2_sound-wave"></i>
+                            visit our website
+                          </span>
+                        </div>
+                      </CardFooter>
+                    </CardBody>
+                  </Card>
+                </Col>
               </div>
             </Row>
           </Container>
-          <div>
+        </div>
+        <div>
+          <hr
+            style={{
+              color: "#3f51b5",
+              backgroundColor: "#3f51b5",
+              height: 3
+            }}
+          />
+          <div className="section-story-overview" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}>
+            <Container fluid>
+              <Row>
+                <Col className="ml-auto mr-auto text-center" md="8">
+                  <h6 className="category text-muted">Some of my projects</h6>
+                  <h2 className="title">Tetris</h2>
+                </Col>
+              </Row>
+              <Row>
+                <div class="col-sm-1" >
+                </div>
+                <div class="col-sm-4" style={{ textAlign: 'center' }}>
+                  <div tag="div">
+                    <h4>
+                      Another one of my projects is Tetris that you can try right away. You can see the whole code on my github page.
+                    </h4>
+                  </div>
+                </div>
+                <div class="col-sm-6" id='tetris' onMouseEnter={changeScroll} onMouseLeave={changeScroll}
+                  style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")" }}>
+                  <Container >
+                    <Tetris />
+                  </Container>
+                </div>
+                <div class="col-sm-1" >
+                </div>
+              </Row>
+            </Container>
           </div>
         </div>
         <Footer />
