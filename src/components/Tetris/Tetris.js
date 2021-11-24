@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Tetris.css'
 import Stage from './Stage'
 import Display from './Display'
@@ -10,7 +10,7 @@ import { useInterval } from './hooks/useInterval'
 import { useGameStatus } from './hooks/useGameStatus'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris';
 
-const Tetris = () => {
+const Tetris = (props) => {
     const [dropTime, setDropTime] = useState(null)
     const [gameOver, setGameOver] = useState(false)
     const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
@@ -31,6 +31,8 @@ const Tetris = () => {
         setRows(0)
         setLevel(0)
     }
+
+
     const drop = () => {
         if (rows > (level + 1) * 10) {
             setLevel(prev => prev + 1)
@@ -84,6 +86,12 @@ const Tetris = () => {
         drop();
     }, dropTime)
 
+    useEffect(() => {
+        if (props.start === true) {
+            document.getElementById('myBtn').getElementsByTagName('button')[0].click()
+        }
+    }, [props])
+
     return (
         <StyledTetrisWrapper role='button' tabIndex='0' onKeyDown={e => move(e)} onKeyUp={keyUp}>
             <StyledTetris>
@@ -96,7 +104,9 @@ const Tetris = () => {
                             <Display text={`Level: ${level}`} />
                         </div>
                     }
-                    <StartButton callback={startGame} />
+                    <div id='myBtn'>
+                        <StartButton callback={startGame} />
+                    </div>
                 </aside>
             </StyledTetris>
         </StyledTetrisWrapper>

@@ -1,4 +1,5 @@
 import React from "react";
+import LightSpeed from 'react-reveal/LightSpeed';
 
 import { Row, Col } from "reactstrap";
 
@@ -28,15 +29,17 @@ function AboutUsHeader() {
           }}
           ref={pageHeader}
         ></div>
-        
+
         <div className="content-center">
           <Row>
             <Col className="ml-auto mr-auto" md="8">
-              <h1 className="title">About Me</h1>
-              <h4>
-                Meet me and find out more
-                about my interest.
-              </h4>
+              <LightSpeed>
+                <h1 className="title">About Me</h1>
+                <h4>
+                  Meet me and find out more
+                  about my interest.
+                </h4>
+              </LightSpeed>
             </Col>
           </Row>
         </div>

@@ -18,6 +18,7 @@ import {
 import ContactUsHeader from "components/Headers/ContactUsHeader.js";
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Zoom from 'react-reveal/Zoom';
 
 function ContactUs() {
   const [nameFocus, setNameFocus] = React.useState(false);
@@ -84,10 +85,12 @@ function ContactUs() {
         <ContactUsHeader />
         <div className="main">
           <div className="contact-content">
-              <Container className='rounded' style={{backgroundColor:"#bebeb4", boxShadow: '8px 8px 3px #E2D5DD'}}>
+            <Container className='rounded' style={{ backgroundColor: "#bebeb4", boxShadow: '8px 8px 3px #E2D5DD' }}>
               <Row>
                 <Col className="ml-auto mr-auto" md="5">
-                  <h2 className="title">Send me a message</h2>
+                  <Zoom>
+                    <h2 className="title">Send me a message</h2>
+                  </Zoom>
                   <p className="description" style={{ color: "black" }}>
                     <b> You can contact me with anything related to my work.
                       I'll get in touch with you as soon as possible. </b>  <br></br>
@@ -147,8 +150,8 @@ function ContactUs() {
                         value={values.message}
                       ></Input>
                     </FormGroup>
-                    <div className="submit text-center" 
-                        style={{paddingBottom:"20px"}}>
+                    <div className="submit text-center"
+                      style={{ paddingBottom: "20px" }}>
                       <Button
                         className="btn-raised btn-round"
                         color="info"

@@ -7,8 +7,10 @@ function ProjectHeader() {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
         let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
+        pageHeader.current != null ? pageHeader.current.style.transform =
+          "translate3d(0," + windowScrollTop + "px,0)" : console.log('null')
+        pageHeader.current != null ? pageHeader.current.style.transform =
+          "translate3d(0," + windowScrollTop + "px,0)" : console.log(null)
       };
       window.addEventListener("scroll", updateScroll);
       return function cleanup() {

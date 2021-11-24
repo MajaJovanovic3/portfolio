@@ -1,4 +1,5 @@
 import React from "react";
+import LightSpeed from 'react-reveal/LightSpeed';
 
 function HomeHeader() {
   return (
@@ -17,11 +18,13 @@ function HomeHeader() {
           ></div>
         </div>
         <div className="rellax-text-container ">
-          <h3 className="h3-description rellax-text" data-rellax-speed="-1">
-            Welcome to my portfolio
-            <br />
-            Frontend and backend developer
-          </h3>
+          <LightSpeed>
+            <h3 className="h3-description rellax-text" data-rellax-speed="-1">
+              Welcome to my portfolio
+              <br />
+              Frontend and backend developer
+            </h3>
+          </LightSpeed>
         </div>
       </div>
     </>
