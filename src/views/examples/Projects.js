@@ -8,9 +8,9 @@ import ProjectHeader from "components/Headers/ProjectHeader.js";
 import Carausel from "./Carausel";
 import Footer from "components/Footers/Footer.js";
 import Tetris from "components/Tetris/Tetris";
-import Rotate from 'react-reveal/Rotate';
-import LightSpeed from 'react-reveal/LightSpeed';
+import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
+import Zoom from 'react-reveal/Zoom';
 import {
   Card,
   CardBody,
@@ -40,15 +40,15 @@ function Projects() {
       <div className="cd-section" id="projects" style={{ backgroundColor: "#ebf1ff" }}>
         <div className="projects-3" style={{ backgroundImage: "url(" + require("assets/img/projectBackground.jpg").default + ")", }}>
           <Container>
-            <Rotate delay={800}>
+            <Zoom>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
                   <h6 className="category text-muted">Some of my projects</h6>
                   <h2 className="title">To-Do App</h2>
                 </Col>
               </Row>
-            </Rotate>
-            <LightSpeed fraction="0.1" cascade delay={1500}>
+            </Zoom>
+            <Fade bottom fraction="0.1" cascade delay={500}>
               <div className="section-story-overview">
                 <Row >
                   <Col md="6" style={{ display: "block" }}>
@@ -129,7 +129,7 @@ function Projects() {
                   </Col>
                 </Row>
               </div>
-            </LightSpeed>
+            </Fade>
           </Container>
         </div>
         <hr
@@ -144,7 +144,7 @@ function Projects() {
             <Row>
               <Col className="mr-auto ml-auto text-center" md="8">
                 <h6 className="category text-muted">Some of my projects</h6>
-                <Rotate >  <h2 className="title">Novine Srbija</h2> </Rotate>
+                <Zoom >  <h2 className="title">Novine Srbija</h2> </Zoom>
               </Col>
             </Row>
             <Slide left>
@@ -247,7 +247,7 @@ function Projects() {
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
                   <h6 className="category text-muted">Some of my projects</h6>
-                  <Rotate >  <h2 className="title">Tetris</h2> </Rotate >
+                  <Zoom >  <h2 className="title">Tetris</h2> </Zoom >
                 </Col>
               </Row>
               <Row>

@@ -4,17 +4,13 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import Rotate from 'react-reveal/Rotate';
 import Slide from 'react-reveal/Slide';
 import Roll from 'react-reveal/Roll';
-
+import Fade from 'react-reveal/Fade';
 import DropdownFixedNavbar from "components/Navbars/DropdownFixedNavbar.js";
 import AboutUsHeader from "components/Headers/AboutUsHeader.js";
 import Footer from "components/Footers/Footer.js";
 
-<style>
-
-</style>
 function AboutUs() {
   React.useEffect(() => {
     document.body.classList.add("about-us");
@@ -34,13 +30,13 @@ function AboutUs() {
         <AboutUsHeader />
         <div className="section">
           <div className="features-3">
-            <Rotate left cascade fraction="0.2">
+            <Fade left cascade fraction="0.2">
               <Container className='rounded' style={{ backgroundColor: "#536e35", boxShadow: '8px 8px 3px #ccc' }}>
                 <Row>
                   <Col className="mr-auto ml-auto" md="6">
-                    <Rotate left fraction="0.1" delay={900}>
+                    <Slide left fraction="0.1" delay={900}>
                       <h2 className="title">Positive. Communicative. Adventurer.</h2>
-                    </Rotate>
+                    </Slide>
                     <h4 className="description" style={{ color: 'white' }}>
                       Hi, I'm Maja. I am a junior programmer. My first love was maths, which is not surprising considering that I graduated from the special mathematics department at Grammar school in Valjevo, but I switched to IT at university.
                       Simply, I’ve seen greater application in the real world. It was challenging for me, I tried myself in various programming languages,  but in the end, I stayed at javascript, trying to learn both, the frontend and the backend part.
@@ -59,17 +55,17 @@ function AboutUs() {
                   </Col>
                 </Row>
               </Container>
-            </Rotate>
+            </Fade>
           </div>
           <div className="separator-line bg-info"></div>
 
-          <Rotate left fraction="0.2">
+          <Fade left fraction="0.2">
             <Container className='rounded' style={{ backgroundColor: "#536e35", boxShadow: '8px 8px 3px #ccc' }}>
               <Row className="text-center">
                 <Col className="ml-auto mr-auto" md="8">
-                  <Rotate left fraction="0.1" delay={900}>
+                  <Slide left fraction="0.1" delay={900}>
                     <h2 className="title">Basic info</h2>
-                  </Rotate>
+                  </Slide>
                   <h4 className="description" style={{ color: 'white' }}>
                     Name: Maja Lukić <br />
                     Nationality: Serbian  <br />
@@ -80,16 +76,16 @@ function AboutUs() {
                 </Col>
               </Row>
             </Container>
-          </Rotate>
+          </Fade>
           <div className="separator-line bg-info"></div>
           <div className="about-office">
-            <Rotate left cascade fraction="0.3">
+            <Fade left cascade fraction="0.3">
               <Container className='rounded' style={{ backgroundColor: "#536e35", boxShadow: '8px 8px 3px #ccc' }}>
                 <Row className="text-center">
                   <Col className="ml-auto mr-auto" md="8">
-                    <Rotate left fraction="0.1" delay={900}>
+                    <Slide left fraction="0.1" delay={900}>
                       <h2 className="title">Spare time</h2>
-                    </Rotate>
+                    </Slide>
                     <h4 className="description" style={{ color: 'white' }}>
                       In addition to programming, I am keen on sports and adventure.
                       I do recreational running, but that was no reason not to find myself on a podium. &nbsp; &nbsp;
@@ -97,7 +93,7 @@ function AboutUs() {
                     </h4>
                   </Col>
                 </Row>
-                <Roll right cascade delay={800}>
+                <Slide right cascade delay={800}>
                   <div>
                     <Row>
                       <Col style={{ display: 'flex', justifyContent: 'space-evenly' }}>
@@ -138,9 +134,9 @@ function AboutUs() {
                       </Col>
                     </Row>
                   </div>
-                </Roll>
+                </Slide>
               </Container>
-            </Rotate>
+            </Fade>
           </div>
         </div>
         <Footer />
