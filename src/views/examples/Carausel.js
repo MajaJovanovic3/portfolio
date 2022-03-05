@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Container,
   Row,
@@ -9,26 +8,7 @@ import {
   CarouselIndicators,
 } from "reactstrap";
 
-import izvor2 from '../../assets/img/izvor2.jpg'
-import darkMode from '../../assets/img/darkMode.jpg'
-import pretraga from '../../assets/img/pretraga.jpg'
-import izvor from '../../assets/img/izvor.jpg'
-const items = [
-  {
-    src: require("assets/img/izvor.jpg").default,
-    altText: "",
-  },
-  {
-    src: require("assets/img/izvor2.jpg").default,
-    altText: "",
-  },
-  {
-    src: require("assets/img/darkMode.jpg").default,
-    altText: "",
-  },
-];
-
-function CarouselSection() {
+function CarouselSection({items}) {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const onExiting = () => {
@@ -76,9 +56,9 @@ function CarouselSection() {
                         src={item.src}
                         alt={item.altText}
                         className="d-block"
-                        height="400px"
-                        width="auto"
-                        style={{paddingLeft:'25px'}}
+                        height={item.height}
+                        width={item.width}
+                        style={item.style}
                       />
                     </CarouselItem>
                   );

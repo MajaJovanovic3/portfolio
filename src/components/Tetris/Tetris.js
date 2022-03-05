@@ -9,6 +9,7 @@ import { useStage } from './hooks/useStage'
 import { useInterval } from './hooks/useInterval'
 import { useGameStatus } from './hooks/useGameStatus'
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris';
+import { Visibility } from '@mui/icons-material';
 
 const Tetris = (props) => {
     const [dropTime, setDropTime] = useState(null)
@@ -94,21 +95,28 @@ const Tetris = (props) => {
 
     return (
         <StyledTetrisWrapper role='button' tabIndex='0' onKeyDown={e => move(e)} onKeyUp={keyUp}>
-            <StyledTetris>
-                <Stage stage={stage} />
-                <aside>
-                    {gameOver ? <Display gameOver={gameOver} text="Game Over" /> :
-                        <div>
-                            <Display text={`Score: ${score}`} />
-                            <Display text={`Rows: ${rows}`} />
-                            <Display text={`Level: ${level}`} />
+            {window.innerWidth >= 560 ?
+                <StyledTetris>
+                    <Stage stage={stage} />
+                    <aside>
+                        {gameOver ? <Display gameOver={gameOver} text="Game Over" /> :
+                            <div>
+                                <Display text={`Score: ${score}`} />
+                                <Display text={`Rows: ${rows}`} />
+                                <Display text={`Level: ${level}`} />
+                            </div>
+                        }
+                        <div id='myBtn'>
+                            <StartButton callback={startGame} />
                         </div>
-                    }
-                    <div id='myBtn'>
+                    </aside>
+                </StyledTetris> :
+                <StyledTetris>
+                    <Stage stage={stage} />
+                    <div id='myBtn' style={{ display: 'none' }} >
                         <StartButton callback={startGame} />
                     </div>
-                </aside>
-            </StyledTetris>
+                </StyledTetris>}
         </StyledTetrisWrapper>
     )
 }

@@ -13,7 +13,7 @@ function Presentation() {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
 
-    if (window.innerWidth >= 991) {
+    if (window.innerWidth >= 360) {
       setTimeout(function () {
         new Rellax(".rellax", {
           center: true,
